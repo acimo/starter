@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>helloworld</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+      <servlet>                                                          <!-- #4 -->
+         <servlet-name>helloworld</servlet-name>                         <!-- #5 -->
+         <servlet-class>                                                 <!-- #6 -->
+             <!-- com.apress.apachetomcat7.chapter2.HelloWorldServlet -->
+             helloworld.servlets.ServletNumber1
+         </servlet-class>
+         <init-param>                                                    <!-- #7 -->
+             <param-name>message</param-name>                            <!-- #8 -->
+             <param-value>Hello Universe!</param-value>                  <!-- #9 -->
+         </init-param>
+     </servlet>
+
+     <servlet-mapping>                                                   <!-- #10 -->
+         <servlet-name>helloworld</servlet-name>                         <!-- #11 -->
+         <url-pattern>/hello.html</url-pattern>                          <!-- #12 -->
+     </servlet-mapping>
+     
+     
+     <servlet>	                                                          <!-- #4 -->
+         <servlet-name>helloworldB</servlet-name>                         <!-- #5 -->
+         <servlet-class>                                                 <!-- #6 -->
+             <!-- com.apress.apachetomcat7.chapter2.HelloWorldServlet -->
+             helloworld.servlets.ServletNumber1B
+         </servlet-class>
+         <init-param>                                                    <!-- #7 -->
+             <param-name>message</param-name>                            <!-- #8 -->
+             <param-value>Hello Universe! B</param-value>                  <!-- #9 -->
+         </init-param>
+     </servlet>
+
+     <servlet-mapping>                                                   <!-- #10 -->
+         <servlet-name>helloworldB</servlet-name>                         <!-- #11 -->
+         <url-pattern>/hello1b.html</url-pattern>                          <!-- #12 -->
+     </servlet-mapping>
+     
+     
+   	<servlet>                                                            <!-- #4 -->
+         <servlet-name>helloworld2</servlet-name>                         <!-- #5 -->
+         <servlet-class>                                                 <!-- #6 -->
+             <!-- com.apress.apachetomcat7.chapter2.HelloWorldServlet -->
+             helloworld.servlets.ServletNumber2
+         </servlet-class>
+         <init-param>                                                    <!-- #7 -->
+             <param-name>message</param-name>                            <!-- #8 -->
+             <param-value>Hello 2niverse!</param-value>                  <!-- #9 -->
+         </init-param>
+     </servlet>
+
+     <servlet-mapping>                                                   <!-- #10 -->
+         <servlet-name>helloworld2</servlet-name>                         <!-- #11 -->
+         <url-pattern>/hello2.html</url-pattern>                          <!-- #12 -->
+     </servlet-mapping>
+     
+</web-app>
